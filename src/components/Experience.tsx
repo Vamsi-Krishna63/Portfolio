@@ -28,6 +28,7 @@ const experiences = [
       'Implemented security policies including SSH key management and RBAC.',
     ],
   },
+  /* Commented out Junior Software Intern experience
   {
     title: 'Junior Software Intern',
     company: 'Sola Info IT Solutions Pvt Ltd',
@@ -39,6 +40,7 @@ const experiences = [
       'Developed automated infrastructure solutions using Ansible and PowerShell.',
     ],
   },
+  */
 ];
 
 const Experience = () => {
