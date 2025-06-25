@@ -32,11 +32,6 @@ const certifications = [
     link: 'https://learn.microsoft.com/en-us/users/vamsikrishna-1156/credentials/443db5a231504091?ref=https%3A%2F%2Fwww.linkedin.com%2F',
   },
   {
-    name: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    link: 'https://aws.amazon.com/certification/',
-  },
-  {
     name: 'Oracle Cloud Infrastructure 2022 Certified Foundation Associate',
     issuer: 'Oracle',
     link: 'https://www.linkedin.com/in/vamsi-krishna-koppala-3b2088194/details/certifications/1746744985929/single-media-viewer?type=DOCUMENT&profileId=ACoAAC2SwDYBOinEaPFWgRqJyHSb9VsYt1d49Ws&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BuIl0RzBTRFWWDfb2RmYk%2FQ%3D%3D',

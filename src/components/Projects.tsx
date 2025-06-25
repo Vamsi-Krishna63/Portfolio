@@ -14,7 +14,7 @@ const projects = [
       'Designed optimized document retrieval pipeline using SentenceTransformers',
       'Implemented API-driven architecture for multi-modal query processing'
     ],
-    github: 'https://github.com/Vamsi-Krishna/qa-bot',
+    github: 'https://github.com/Vamsi-Krishna63/On_Demand_Professor-Q-A-Bot',
     live: '#'
   },
   {
@@ -27,7 +27,7 @@ const projects = [
       'Integrated Content Security Policy headers',
       'Enhanced application security against overlay-based attacks'
     ],
-    github: 'https://github.com/Vamsi-Krishna/project-shield',
+    github: 'https://github.com/Vamsi-Krishna63/Project-Shield-Safeguarding-Against-Deceptive-Attacks-using-Clickjacking',
     live: '#'
   },
   {
@@ -40,7 +40,7 @@ const projects = [
       'Integrated symbolic reasoning with neural networks',
       'Optimized feature selection using attention-based methods'
     ],
-    github: 'https://github.com/Vamsi-Krishna/nesy-concept-revision',
+    github: 'https://github.com/Vamsi-Krishna63/Neuro-Symbolic-Concept-Revision-Using-Interactive-Explanations',
     live: '#'
   },
   {
@@ -53,7 +53,7 @@ const projects = [
       'Engineered defensive prompting modules with 100% mitigation rate',
       'Optimized execution with GPU offloading and batch inference'
     ],
-    github: 'https://github.com/Vamsi-Krishna/llm-privacy',
+    github: 'https://github.com/Vamsi-Krishna63/LLM-Privacy-Evaluation-Defense-Framework',
     live: '#'
   }
 ];
