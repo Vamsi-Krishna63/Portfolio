@@ -1,33 +1,80 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaAws, FaDocker, FaGithub, FaLinux, FaPython, FaReact, FaCloud, FaJava } from 'react-icons/fa';
-import { SiJenkins, SiMongodb, SiMysql, SiTailwindcss, SiTypescript, SiPytorch, SiJupyter } from 'react-icons/si';
+import { FaAws, FaDocker, FaGithub, FaLinux, FaPython, FaReact, FaCloud, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaWindows, FaChartBar, FaMicrophone, FaServer, FaCode, FaFileAlt } from 'react-icons/fa';
+import { SiJenkins, SiMongodb, SiMysql, SiTailwindcss, SiTypescript, SiPytorch, SiJupyter, SiDjango, SiKubernetes, SiBootstrap, SiPowers, SiTableau, SiVk, SiHuggingface, SiScikitlearn, SiGitlab, SiC, SiMacos, SiChartdotjs } from 'react-icons/si';
 
 const skills = [
   // Programming Languages
   { name: 'Python', icon: FaPython },
   { name: 'Java', icon: FaJava },
+  { name: 'C', icon: SiC },
   { name: 'TypeScript', icon: SiTypescript },
+  { name: 'JavaScript', icon: FaJs },
+  { name: 'HTML5', icon: FaHtml5 },
+  { name: 'CSS3', icon: FaCss3Alt },
   
-  // ML & AI
-  { name: 'PyTorch', icon: SiPytorch },
-  { name: 'NLP', icon: SiJupyter },
-  { name: 'LLMs', icon: SiJupyter },
+  // Web Development
+  { name: 'React', icon: FaReact },
+  { name: 'Node.js', icon: FaNodeJs },
+  { name: 'Django', icon: SiDjango },
+  { name: 'Flask', icon: SiJupyter },
+  { name: 'Bootstrap 5', icon: SiBootstrap },
+  { name: 'Tailwind CSS', icon: SiTailwindcss },
   
-  // Cloud & DevOps
+  // Databases
+  { name: 'MySQL', icon: SiMysql },
+  { name: 'MongoDB', icon: SiMongodb },
+  { name: 'Qdrant', icon: SiJupyter },
+  { name: 'NoSQL', icon: SiMongodb },
+  
+  // Cloud Technologies
   { name: 'AWS', icon: FaAws },
   { name: 'Azure', icon: FaCloud },
-  { name: 'Docker', icon: FaDocker },
-  { name: 'Linux', icon: FaLinux },
-  { name: 'Jenkins', icon: SiJenkins },
+  { name: 'Lambda', icon: FaAws },
+  { name: 'S3', icon: FaAws },
+  { name: 'EC2', icon: FaAws },
+  { name: 'Redshift', icon: FaAws },
+  { name: 'VMSS', icon: FaCloud },
+  { name: 'Blob Storage', icon: FaCloud },
   
-  // Databases & Web
-  { name: 'MongoDB', icon: SiMongodb },
-  { name: 'MySQL', icon: SiMysql },
-  { name: 'React', icon: FaReact },
-  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  // DevOps & CI/CD
+  { name: 'Docker', icon: FaDocker },
+  { name: 'Jenkins', icon: SiJenkins },
+  { name: 'Kubernetes', icon: SiKubernetes },
+  { name: 'Git', icon: FaGitAlt },
   { name: 'GitHub', icon: FaGithub },
+  { name: 'GitLab', icon: SiGitlab },
+  
+  // AI/ML Frameworks
+  { name: 'PyTorch', icon: SiPytorch },
+  { name: 'Hugging Face', icon: SiHuggingface },
+  { name: 'SentenceTransformers', icon: SiHuggingface },
+  { name: 'Scikit-learn', icon: SiScikitlearn },
+  { name: 'NLP', icon: SiJupyter },
+  { name: 'NER', icon: SiJupyter },
+  { name: 'LLMs', icon: SiJupyter },
+  
+  // Platforms & IDEs
+  { name: 'Linux', icon: FaLinux },
+  { name: 'Windows', icon: FaWindows },
+  { name: 'MacOS', icon: SiMacos },
+  { name: 'VS Code', icon: FaCode },
+  { name: 'Eclipse', icon: FaServer },
+  
+  // Visualization Tools
+  { name: 'PowerBI', icon: SiPowers },
+  { name: 'Tableau', icon: SiTableau },
+  { name: 'Matplotlib', icon: SiChartdotjs },
+  { name: 'Excel', icon: FaFileAlt },
+  
+  // Speech Recognition
+  { name: 'Whisper', icon: FaMicrophone },
+  { name: 'Vosk', icon: SiVk },
+  
+  // Web Technologies
+  { name: 'REST APIs', icon: FaJs },
+  { name: 'FormData API', icon: FaJs },
 ];
 
 const About = () => {
@@ -46,9 +93,13 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Highly skilled Software Engineer and Research Assistant specializing in cloud computing, DevOps,
-            infrastructure management, and AI-driven applications. Proficient in Microsoft Azure, Linux, and Docker
-            with hands-on experience in CI/CD pipelines and automation.
+            Software Engineer with hands-on experience in full-stack web development, cloud infrastructure,
+            and AI-integrated applications. Skilled in Python, Java, React, Flask, and RESTful API design with strong
+            DevOps knowledge using Docker, Jenkins, and Git. Proven success in building secure, scalable systems across
+            Microsoft Azure and AWS environments. Developed advanced solutions integrating LLMs, Whisper-based
+            speech recognition, and semantic search using SentenceTransformers and Qdrant. Certified in Azure
+            Developer (AZ-204), and Oracle Cloud, with a strong focus on backend development, system security, and
+            intelligent data-driven applications.
           </p>
         </motion.div>
 

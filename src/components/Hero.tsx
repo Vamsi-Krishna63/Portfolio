@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 const roles = [
   'Graduate Student',
@@ -16,6 +17,7 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const typingSpeed = isDeleting ? 50 : 100;
@@ -42,16 +44,32 @@ const Hero = () => {
   }, [currentText, currentRoleIndex, isDeleting]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background gradient with animated particles */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <div className="absolute inset-0 opacity-30 dark:opacity-20">
+          <div className="absolute w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent animate-pulse" />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <div 
-            className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+          <motion.div 
+            className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
             onClick={() => setIsModalOpen(true)}
           >
             <Image
@@ -61,7 +79,8 @@ const Hero = () => {
               className="object-cover"
               priority
             />
-          </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent" />
+          </motion.div>
 
           <AnimatePresence>
             {isModalOpen && (
@@ -69,13 +88,13 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+                className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
                 onClick={() => setIsModalOpen(false)}
               >
                 <motion.div
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0.5 }}
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.5, opacity: 0 }}
                   className="relative max-w-4xl w-full aspect-square"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -83,11 +102,11 @@ const Hero = () => {
                     src="/Profile.jpg"
                     alt="Vamsi Krishna"
                     fill
-                    className="object-contain"
+                    className="object-contain rounded-lg"
                     priority
                   />
                   <button
-                    className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition-colors"
+                    className="absolute top-4 right-4 text-white bg-black/50 backdrop-blur-sm rounded-full p-2 hover:bg-black/75 transition-colors"
                     onClick={() => setIsModalOpen(false)}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,42 +118,71 @@ const Hero = () => {
             )}
           </AnimatePresence>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Hi, I'm Vamsi Krishna
-          </h1>
-          <div className="h-8 sm:h-10 md:h-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-blue-600 dark:text-blue-400">
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Vamsi Krishna</span>
+          </motion.h1>
+          
+          <motion.div 
+            className="h-8 sm:h-10 md:h-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-medium">
               {currentText}
               <span className="animate-blink">|</span>
             </h2>
-          </div>
-          <p className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          </motion.div>
+
+          <motion.p 
+            className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
             Specializing in LLMs, NLP, cloud computing, infrastructure management, and AI-driven applications.
             Passionate about building secure, scalable, and intelligent solutions.
-          </p>
+          </motion.p>
           
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <motion.div 
+            className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
             <Link
               href="#projects"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="group relative px-8 py-3 bg-blue-600 text-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50"
             >
-              View My Work
+              <span className="relative z-10">View My Work</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
            
             <Link
               href="#contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+              className="group relative px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50"
             >
-              Contact Me
+              <span className="relative z-10">Contact Me</span>
+              <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
-          </div>
+          </motion.div>
 
-          <div className="mt-12 flex justify-center space-x-6">
+          <motion.div 
+            className="mt-12 flex justify-center space-x-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
             <a
               href="https://github.com/Vamsi-Krishna63"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
             >
               <span className="sr-only">GitHub</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -145,14 +193,14 @@ const Hero = () => {
               href="https://www.linkedin.com/in/vamsi-krishna-koppala-3b2088194"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
             >
               <span className="sr-only">LinkedIn</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

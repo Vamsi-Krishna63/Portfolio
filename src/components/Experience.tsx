@@ -5,15 +5,20 @@ import { FaBriefcase } from 'react-icons/fa';
 
 const experiences = [
   {
-    title: 'Research Assistant',
+    title: 'Indpendent Reseracher',
+    UnderSupervision:'Prof. Akbar Siami Namin, Ph.D',
     company: 'Texas Tech University',
     period: 'April 2024 - May 2025',
     description: [
-      'Conducted applied research in Sensitive Data Detection, integrating Speech-to-Text (STT) systems with Large Language Models (LLMs).',
-      'Engineered a full-stack Python web application combining Flask, HTML5, CSS3, and Bootstrap for real-time processing.',
-      'Developed a dual-model sensitive data detection framework using pattern matching and LLM-based contextual analysis.',
-      'Implemented speech recognition pipelines using OpenAI Whisper with GPU acceleration.',
-      'Built a Qdrant vector database for efficient semantic similarity search.',
+      'Conducted applied research in Sensitive Data Detection, integrating Speech-to-Text (STT) systems with Large Language Models (LLMs) to identify sensitive information in unstructured text and audio.',
+      'Engineered a full-stack Python web application combining Flask, HTML5, CSS3, and Bootstrap for real-time processing of audio and text data with sensitive information detection.',
+      'Developed a dual-model sensitive data detection framework using traditional pattern matching (regex, Word2Vec similarity) and LLM-based contextual analysis powered by Meta-Llama-3-8B-Instruct.',
+      'Implemented speech recognition pipelines utilizing OpenAI Whisper with GPU acceleration via PyTorch, enabling real-time transcription from microphone inputs and audio file uploads.',
+      'Built a Qdrant vector database for efficient semantic similarity search of sensitive terms based on Word2Vec embeddings, enhancing approximate matching and classification performance.',
+      'Designed and deployed an adaptive feedback mechanism that dynamically refines detection models based on user corrections, ensuring continuous learning and accuracy improvement. Integrated text pre-processing techniques such as tokenization, stemming, lemmatization, stop-word removal, and TF-IDF vectorization to enhance feature extraction.',
+      'Integrated Transformer-based NER models like BERT fine-tuned and DistilBERT model for entity recognition and Zero-shot classification models (Facebook/BART-large-MNLI) to augment semantic understanding and context analysis.',
+      'Conducted comparative analysis between traditional methods and LLM-based methods, improving detection accuracy and reducing false positives through confidence scoring and overlap analysis.',
+      'Developed interactive data visualization dashboards and downloadable analysis reports to streamline user interpretation of sensitive data detection results.',
     ],
   },
   {
@@ -21,11 +26,14 @@ const experiences = [
     company: 'DXC Technology',
     period: 'May 2023 - Dec 2023',
     description: [
-      'Executed VM and physical server OS patching operations for security and compliance.',
-      'Specialized in Azure VM OS patching and troubleshooting.',
-      'Resolved 95% of system complex issues on CentOS and RHEL systems.',
-      'Managed complex infrastructure design in Linux, VMware, and AIX environments.',
-      'Implemented security policies including SSH key management and RBAC.',
+      'The team executes VM (virtual machine) and physical server OS patching operations for security purposes while maintaining stability and industry compliance.',
+      'The software developer has expertise in Azure VM OS patching and troubleshooting while also deploying automated deployment of patches to enhance system performance.',
+      'A total of 95% of system complex issues on CentOS and RHEL systems were successfully resolved by my troubleshooting efforts. The system performance and reliability gain improvement through automated patch deployment methods.',
+      'The professional maintains a specialization in infrastructure management where they excel at complex infrastructure design work and maintenance tasks in Linux, VMware, and AIX environments.',
+      'My expertise includes detailed understanding of virtualization along with Microsoft Azure and other services such as VMware ESXi, Hyper-V, and IBM AIX virtualization.',
+      'Experienced in Azure Virtual Network infrastructure creation as well as Network Security Group deployment, VM Scaling (VMSS), and Load Balancer configurations to optimize cloud performance.',
+      'Security policies are implemented with three core components: SSH key management, role-based access control (RBAC), and access control methods.',
+      'Worked with DevOps tools such as Jenkins, Docker, and Git, contributing to CI/CD pipeline development, containerized application deployment, and version control best practices.',
     ],
   },
   /* Commented out Junior Software Intern experience
