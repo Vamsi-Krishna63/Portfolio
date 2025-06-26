@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { FaReact, FaPython, FaAws, FaDocker, FaGitAlt } from 'react-icons/fa';
-import { SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiTensorflow, SiPytorch } from 'react-icons/si';
+import { SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiTensorflow, SiPytorch, SiRedis } from 'react-icons/si';
+import { RiLockPasswordLine, RiShieldLine } from 'react-icons/ri';
 
 const skills = [
   {
@@ -19,8 +20,11 @@ const skills = [
     category: 'Backend',
     items: [
       { name: 'Python', icon: FaPython, level: 95 },
+      { name: 'PostgreSQL', icon: SiPostgresql, level: 85 },
+      { name: 'Redis', icon: SiRedis, level: 80 },
+      { name: 'OAuth2', icon: RiLockPasswordLine, level: 85 },
+      { name: 'JWT', icon: RiShieldLine, level: 85 },
       { name: 'MongoDB', icon: SiMongodb, level: 85 },
-      { name: 'PostgreSQL', icon: SiPostgresql, level: 80 },
       { name: 'AWS', icon: FaAws, level: 85 },
       { name: 'Docker', icon: FaDocker, level: 80 },
     ]
