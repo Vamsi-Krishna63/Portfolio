@@ -9,11 +9,11 @@ const projects = [
     description: 'A comprehensive backend platform for secure financial transactions with fraud detection, compliance features, and microservice architecture.',
     technologies: ['FastAPI', 'Python', 'PostgreSQL', 'OAuth2', 'JWT', 'Redis', 'Docker', 'scikit-learn'],
     points: [
-      'Engineered a secure financial transaction backend using FastAPI, Python, and PostgreSQL, integrating OAuth2, JWT, and PCI-DSS-compliant encryption protocols',
-      'Built and documented over 15+ RESTful API endpoints with Pydantic validation and OpenAPI/Swagger for seamless third-party integration',
-      'Designed a fraud detection engine using scikit-learn to analyze real-time transaction patterns and detect anomalies',
-      'Containerized the full application stack using Docker and Docker Compose, supporting CI/CD practices across environments',
-      'Implemented scalable session management and rate limiting using Redis for high-throughput payment scenarios'
+      'Engineered secure financial backend with FastAPI, PostgreSQL, and OAuth2/JWT authentication',
+      'Built 15+ RESTful API endpoints with Pydantic validation and OpenAPI documentation',
+      'Implemented fraud detection engine using scikit-learn for real-time transaction analysis',
+      'Containerized application with Docker and Docker Compose for consistent deployment',
+      'Integrated Redis for scalable session management and rate limiting'
     ],
     github: 'https://github.com/Vamsi-Krishna63/Finsecurepay',
     live: '#'
