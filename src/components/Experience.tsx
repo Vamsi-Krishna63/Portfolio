@@ -5,7 +5,7 @@ import { FaBriefcase } from 'react-icons/fa';
 
 const experiences = [
   {
-    title: 'Indpendent Reseracher',
+    title: 'Reserach Assistant',
     UnderSupervision:'Prof. Akbar Siami Namin, Ph.D',
     company: 'Texas Tech University',
     period: 'April 2024 - May 2025',
@@ -22,9 +22,9 @@ const experiences = [
     ],
   },
   {
-    title: 'Associate Professional Software Engineer',
+    title: 'Software Engineer',
     company: 'DXC Technology',
-    period: 'May 2023 - Dec 2023',
+    period: 'Nov 2022 - Dec 2023',
     description: [
       'The team executes VM (virtual machine) and physical server OS patching operations for security purposes while maintaining stability and industry compliance.',
       'The software developer has expertise in Azure VM OS patching and troubleshooting while also deploying automated deployment of patches to enhance system performance.',
