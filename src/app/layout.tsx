@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Chatbot from "@/components/Chatbot";
 import Background3D from "@/components/Background3D";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           {children}
         </div>
         <Chatbot />
+        <Analytics />
       </body>
     </html>
   );
