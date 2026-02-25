@@ -1,6 +1,7 @@
 {
   "buildCommand": "cd portfolio-vamsi && npm run build",
-  "installCommand": "npm install && cd portfolio-vamsi && npm install",
+  "installCommand": "cd portfolio-vamsi && npm install",
   "devCommand": "cd portfolio-vamsi && npm run dev",
-  "outputDirectory": "portfolio-vamsi/.next"
+  "outputDirectory": "portfolio-vamsi/.next",
+  "framework": "nextjs"
 }
