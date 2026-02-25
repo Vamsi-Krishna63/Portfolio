@@ -5,6 +5,19 @@ import { FaBriefcase } from 'react-icons/fa';
 
 const experiences = [
   {
+    title: 'Software Engineer',
+    company: 'ePathUSA',
+    period: 'Dec 2025 - Present',
+    description: [
+      'Designed and deployed scalable AI-driven applications on Google Cloud Platform (GCP) using Cloud Run, Compute Engine, Cloud Functions, and Cloud Storage with secure IAM-based access control.',
+      'Built end-to-end machine learning pipelines including data preprocessing, feature engineering, model training, evaluation, and cloud-based deployment using Python and TensorFlow/scikit-learn.',
+      'Developed LLM-powered applications integrating semantic search, document processing, and API-based inference with containerized deployment using Docker.',
+      'Implemented event-driven architectures using Pub/Sub and Cloud Functions to enable real-time data processing and automated microservices communication.',
+      'Designed intelligent automation workflows using n8n (self-hosted with Docker) integrating Webhooks, PostgreSQL, REST APIs, and LLM services for structured data extraction and orchestration.',
+      'Established CI/CD pipelines using Cloud Build and Docker to automate deployments, improve scalability, and reduce operational overhead.',
+    ],
+  },
+  {
     title: 'Reserach Assistant',
     UnderSupervision:'Prof. Akbar Siami Namin, Ph.D',
     company: 'Texas Tech University',
