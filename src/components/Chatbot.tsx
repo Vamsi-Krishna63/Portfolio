@@ -25,7 +25,7 @@ const Chatbot = () => {
     // Initialize the model when the component mounts
     const initModel = async () => {
       try {
-        const response = await fetch('/api/chat', {
+        await fetch('/api/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

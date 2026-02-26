@@ -7,7 +7,8 @@ export default function Background3D() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -15,7 +16,7 @@ export default function Background3D() {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     
     renderer.setSize(window.innerWidth, window.innerHeight);
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     // Create particles
     const particlesGeometry = new THREE.BufferGeometry();
@@ -62,7 +63,7 @@ export default function Background3D() {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      containerRef.current?.removeChild(renderer.domElement);
+      container?.removeChild(renderer.domElement);
       scene.remove(particlesMesh);
       particlesGeometry.dispose();
       particlesMaterial.dispose();

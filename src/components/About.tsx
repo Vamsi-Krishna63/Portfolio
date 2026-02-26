@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaAws, FaDocker, FaGithub, FaLinux, FaPython, FaReact, FaCloud, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaWindows, FaChartBar, FaMicrophone, FaServer, FaCode, FaFileAlt } from 'react-icons/fa';
+import { FaAws, FaDocker, FaGithub, FaLinux, FaPython, FaReact, FaCloud, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaWindows, FaMicrophone, FaServer, FaCode, FaFileAlt } from 'react-icons/fa';
 import { SiJenkins, SiMongodb, SiMysql, SiTailwindcss, SiTypescript, SiPytorch, SiJupyter, SiDjango, SiKubernetes, SiBootstrap, SiPowers, SiTableau, SiVk, SiHuggingface, SiScikitlearn, SiGitlab, SiC, SiMacos, SiChartdotjs } from 'react-icons/si';
 
 const skills = [

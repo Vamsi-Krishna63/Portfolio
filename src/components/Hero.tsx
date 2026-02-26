@@ -17,7 +17,6 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     const typingSpeed = isDeleting ? 50 : 100;
@@ -124,7 +123,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Vamsi Krishna</span>
+            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Vamsi Krishna</span>
           </motion.h1>
           
           <motion.div 
